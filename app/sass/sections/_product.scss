@@ -88,6 +88,11 @@
 				background-color: rgba(0%, 0%, 0%, 0.5);
 			}
 		}
+		.item__tag {
+			top: 0px;
+			left: 0px;
+			right: 0px;
+		}
 	}
 	&__info {
 		display: block;
@@ -345,6 +350,7 @@
 		width: 220px;
 		text-align: center;
 		justify-content: center;
+		position: relative;
 		@include r(800) {
 			width: 50%;
 			max-width: 220px;
@@ -360,6 +366,14 @@
 			@include r(440) {
 				max-width: 100%;
 				margin-bottom: 15px;
+			}
+		}
+		.item__tag {
+			left: 0px;
+			top: 0px;
+			@include r(440) {
+				position: static;
+				margin-bottom: 6px;
 			}
 		}
 	}
