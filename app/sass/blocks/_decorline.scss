@@ -1,0 +1,8 @@
+.decorline {
+	height: 9px;
+	display: block;
+	background-image: url(../img/decorline.svg);
+	background-position: center;
+}
+@include r(1160) {
+}

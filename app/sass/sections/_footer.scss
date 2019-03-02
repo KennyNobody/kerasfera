@@ -1,0 +1,58 @@
+.footer {
+	color: $light;
+	background-color: $dark;
+	&__container {
+		padding-top: 28px;
+		padding-bottom: 19px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include r(1160) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+	}
+	&__logo {
+		display: block;
+		@include r(1160) {
+			margin-right: 20px;
+		}
+		svg {
+			height: 90px;
+			width: 90px;
+			fill: $light;
+		}
+	}
+	&__info {
+		@include r(900) {
+			width: 100%;
+			padding-top: 20px;
+		}
+	}
+	&__info-columns {
+		display: flex;
+		@include r(900) {
+			flex-direction: column;
+		}
+	}
+	&__info-column {
+		width: 264px;
+		&:last-child {
+			width: 248px;
+		}
+	}
+	&__info-title {
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-bottom: 23px;
+	}
+	&__link {
+		@include r(900) {
+			margin-bottom: 20px;
+		}
+	}
+	@include r(736) {
+		
+	}
+}

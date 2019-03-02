@@ -1,0 +1,144 @@
+.price {
+	padding-bottom: 60px;
+	&__title {
+		margin-bottom: 6px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 26px;
+	}
+	@include r(1160) {
+
+	}
+	&__table {
+		margin-bottom: 20px;
+	}
+	&__nav {
+		@include r(1160) {
+			justify-content: center;
+		}
+	}
+}
+
+.table {
+	padding-bottom: 15px;
+	// @include r(1160) {
+	// 	overflow-x: scroll;
+	// }
+	.custom-scroll_bar-x {
+		opacity: 1;
+		height: 4px;
+		background-color: $green;
+	}
+	&__line {
+		display: flex;
+		font-size: 16px;
+		justify-content: space-between;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		line-height: 1.4;
+		width: fit-content;
+		@include r(1160) {
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: flex-start;
+		}
+		@include r(660) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		&--top {
+			background-color: $green !important;
+			color: $light;
+			font-weight: 500;
+			@include r(1160) {
+				display: none;
+			}
+		}
+		&:nth-child(2n+1) {
+			background-color: #fafafa;
+		}
+		sup {
+			position: absolute;
+		}
+		a {
+			color: $green;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__column {
+		flex-shrink: 0;
+		@include r(1160) {
+			margin-bottom: 10px;
+		}
+		&:nth-child(1) {
+			width: 248px;
+			padding-left: 25px;
+			@include r(1160) {
+				width: 33%;
+				max-width: 200px;
+				padding-left: 0px;
+			}
+			@include r(660) {
+				width: 50%;
+				max-width: 300px;
+				order: -1;
+			}
+		}
+		&:nth-child(2) {
+			width: 176px;
+			@include r(1160) {
+				width: 33%;
+				max-width: 200px;
+			}
+			@include r(660) {
+				width: 50%;
+				max-width: 300px;
+			}
+		}
+		&:nth-child(3) {
+			width: 176px;
+			text-align: center;
+			@include r(1160) {
+				width: 33%;
+				max-width: 200px;
+				text-align: left;
+			}
+			@include r(660) {
+				width: 50%;
+				max-width: 300px;
+				order: -1;
+			}
+		}
+		&:nth-child(4) {
+			width: 248px;
+			padding-left: 50px;
+			@include r(1160) {
+				padding-left: 0px;
+				width: 33%;
+				max-width: 200px;
+			}
+			@include r(660) {
+				width: 50%;
+				max-width: 300px;
+			}
+		}
+		&:nth-child(5) {
+			width: 176px;
+			@include r(1160) {
+				padding-left: 0px;
+				width: 33%;
+				max-width: 200px;
+			}
+			@include r(660) {
+				width: 50%;
+				max-width: 300px;
+				margin-bottom: 0px;
+			}
+		}
+	}
+}

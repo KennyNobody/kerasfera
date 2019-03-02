@@ -1,0 +1,77 @@
+.gallery {
+	@include r(1160) {
+
+	}
+	&__container {
+		padding-bottom: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__item {
+		width: calc(25% - 8px);
+		color: $light;
+		height: 252px;
+		position: relative;
+		margin-bottom: 8px;
+		@include r(1160) {
+			width: calc(33% - 3px);
+		}
+		@include r(760) {
+			width: calc(50% - 4px);
+		}
+		@include r(540) {
+			width: 100%;
+		}
+		img {
+			height: 100%;
+			display: block;
+			width: 100%;
+			object-fit: cover;
+		}
+		&:hover {
+			.gallery__overlay {
+				opacity: 1;
+			}
+		}
+		&--clear {
+			overflow: hidden;
+			display: block;
+			height: 0px; 
+			width: calc(25% - 8px);
+			@include r(1160) {
+				width: calc(33% - 3px);
+			}
+			@include r(760) {
+				width: calc(50% - 4px);
+			}
+			@include r(540) {
+				width: 100%;
+			}
+		}
+	}
+	&__overlay {
+		display: flex;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		flex-direction: column;
+		justify-content: flex-end;
+		font-size: 16px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+		line-height: 1.5;
+		opacity: 0;
+		transition: 0.3s all;
+		background: linear-gradient(to top, rgba(13%, 14%, 14%, 0.5), rgba(13%, 14%, 14%, 0));
+		span {
+			font-weight: bold;
+		}
+	}
+	&__hidden {
+		display: none;
+	}
+}

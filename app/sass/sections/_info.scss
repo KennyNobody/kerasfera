@@ -1,0 +1,150 @@
+.info {
+	padding-bottom: 38px;
+	@include r(560) {
+		display: none;
+	}
+	&__blocks {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 49px;
+		@include r(1160) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__block {
+		width: 50%;
+		display: block;
+		max-width: 512px;
+		border: 1px solid #d9d9d9;
+		padding-top: 37px;
+		padding-bottom: 29px;
+		@include r(1160) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&:hover {
+			border-color: $green;
+		}
+	}
+	&__block-title {
+		text-align: center;
+		text-transform: uppercase;
+		color: $green;
+		font-weight: bold;
+		font-size: 36px;
+		margin-bottom: 15px;
+	}
+	&__cards {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+	&__card {
+		width: 90px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 85px;
+		}
+		&--1 {
+			img {
+				width: 82px;
+			}
+		}
+		&--2 {
+			img {
+				width: 66px;
+			}
+		}
+		&--3 {
+			img {
+				width: 90px;
+			}
+		}
+		&--4 {
+			margin-left: 50px;
+			img {
+				width: 56px;
+			}
+		}
+		&--5 {
+			margin-right: 50px;
+			img {
+				width: 56px;
+			}
+		}
+	}
+	&__card-break {
+		display: block;
+		width: 100%;
+		margin-bottom: 13px;
+	}
+	&__delivs {
+		display: flex;
+		justify-content: center;
+		padding-top: 18px;
+	}
+	&__deliv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 175px;
+		&--2 {
+			img {
+				position: relative;
+				left: -5px;
+			}
+		}
+		img {
+			width: 75px;
+			margin-bottom: 14px;
+		}
+	}
+	&__deliv-text {
+		font-size: 16px;
+		color: $dark;
+		line-height: 1.5;
+	}
+	&__columns {
+		display: flex;
+		@include r(1160) {
+			flex-wrap: wrap;
+		}
+	}
+	&__column {
+		width: 25%;
+		@include r(1160) {
+			width: 50%;
+			margin-bottom: 15px;
+		}
+	}
+	&__column-title {
+		text-transform: uppercase;
+		color: $green;
+		font-size: 16px;
+		font-weight: 600;
+		display: block;
+		&:hover {
+			color: $orange;
+		}
+		&--lite {
+			
+		}
+	}
+	&__link {
+		display: block;
+		color: $dark;
+		font-size: 16px;
+		&:hover {
+			color: $green;
+		}
+	}
+	@include r(1160) {
+
+	}
+}

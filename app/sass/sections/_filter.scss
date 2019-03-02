@@ -1,0 +1,224 @@
+.filter {
+	&__wrapper {
+		background-color: $light;
+		@include r(1000) {
+			width: 250px;
+			position: fixed;
+			left: -200%;
+			top: 0px;
+			height: 100%;
+			padding-left: 15px !important;
+			z-index: 4;
+			padding-right: 15px !important;
+			box-sizing: content-box;
+			transition: 0.3s all;
+			.custom-scroll_inner {
+				padding-left: 0px !important;
+				padding-right: 0px !important;
+			}
+		}
+	}
+	&__title {
+		color: $green;
+		font-weight: bold;
+		font-size: 20px;
+		border-bottom: 2px solid $green;
+		margin-bottom: 10px;
+	}
+	&__mob-title {
+		display: none;
+		@include r(1000) {
+			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 18px;
+			height: 46px;
+			border-top: 1px solid #eaeaea;
+			border-bottom: 1px solid #eaeaea;
+			svg {
+				height: 22px;
+				width: 22px;
+			}
+		}
+		&--fixed {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			padding-left: 16px;
+			padding-right: 16px;
+			background-color: $light;
+			z-index: 2;
+			box-shadow: 5px -3px 15px 0px $dark;
+		}
+	}
+	&__overlay {
+		display: none;
+		opacity: 0;
+		transition: 0.3s all;
+		background-color: $dark;
+	}
+	&__checked-block {
+		color: $orange;
+		border: 1px solid $orange;
+		display: inline-block;
+		line-height: 24px;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		max-width: 100%;
+		padding-left: 10px;
+		cursor: pointer;
+		padding-right: 10px;
+		transition: 0.3s all;
+		font-size: 16px;
+		&:hover {
+			color: $light;
+			background-color: $orange;
+		}
+	}
+	&__block {
+		ul {
+			max-height: 0px;
+			height: 150px;
+			transition: 0.3s all;
+			padding-bottom: 0px;
+			overflow: hidden;
+			label {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 25px;
+				padding-right: 14px;
+				position: relative;
+				cursor: pointer;
+				user-select: none;
+				font-size: 16px;
+				opacity: 0;
+				transition: 0.3s all;
+				input {
+					position: absolute;
+					opacity: 0;
+					cursor: pointer;
+					height: 0;
+					width: 0;
+				}
+				input:checked ~ .checkmark:after {
+					display: block !important;
+				}
+				span {
+					order: -1;
+				}
+				.checkmark {
+					position: relative;
+					height: 16px;
+					width: 16px;
+					display: block;
+					box-sizing: border-box;
+					border: 1px solid #a1a1a1;
+				}
+				.checkmark:after {
+					content: "";
+					position: absolute;
+					display: none;
+					left: 4px;
+					top: 0px;
+					width: 4px;
+					height: 9px;
+					border: solid $green;
+					border-width: 0 2px 2px 0;
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+			}
+		}
+		&--open {
+			ul {
+				max-height: 150px;
+				overflow: hidden;
+				overflow-y: scroll; 
+				padding-bottom: 15px;
+				@include r(1000) {
+					height: auto;
+					max-height: 10000px;
+					overflow: hidden;
+				}
+				label {
+					opacity: 1;
+				}
+			}
+			.filter__name--drop {
+				svg {
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+	&__price {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	&__range {
+		margin-left: 26px;
+		margin-right: 28px;
+		margin-bottom: 24px;
+	}
+	&__inputs {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 26px;
+		padding-right: 26px;
+		margin-bottom: 20px;
+		input {
+			width: 82px;
+			font-size: 20px;
+			font-weight: 500;
+			text-align: center;
+			box-sizing: border-box;
+			height: 38px;
+			outline: none;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 2;
+		&--price {
+			padding-left: 24px;
+			padding-right: 20px;
+		}
+		svg {
+			width: 12px;
+			height: 12px;
+			transform: rotate(-90deg);
+			fill: $dark;
+			margin-right: 7px;
+		}
+		&--drop {
+			cursor: pointer;
+		}
+	}
+	&__buttons {
+		margin-bottom: 30px;
+	}
+	&__reset {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 36px;
+		padding-left: 15px;
+		margin-top: 15px;
+		color: $dark;
+		display: inline-flex;
+		padding-right: 15px;
+		border: 1px solid #a1a1a1;
+		transition: 0.3s all;
+		cursor: pointer;
+		&:hover {
+			color: $light;
+			background-color: #a1a1a1;
+		}
+	}
+}
+
+

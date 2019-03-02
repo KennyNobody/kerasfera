@@ -1,0 +1,157 @@
+.order {
+	display: flex;
+	border: 1px solid #a1a1a1;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 8px;
+	@include r(900) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&:hover {
+		background-color: #f1f1f1;
+	}
+	&--single {
+		border-left: 0px;
+		border-right: 0px;
+		&:hover {
+			background-color: $light;
+		}
+		@include r(900) {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+	&__number {
+		font-size: 18px;
+		color: $dark;
+		font-weight: 500;
+		padding-right: 8px;
+		display: flex;
+		align-items: center;
+		margin-right: 18px;
+		@include r(900) {
+			width: 50%;
+			order: -1;
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-right: 0px;
+		}
+	}
+	&__info {
+		font-size: 16px;
+		margin-top: 1px;
+		color: $dark;
+		flex-grow: 1;
+		display: inline-block;
+		align-items: center;
+		line-height: 1.4;
+		b {
+			font-weight: 500;
+			font-size: 18px;
+		}
+		&--single {
+			@include r(900) {
+
+			}
+		}
+	}
+	&__status {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $orange;
+		width: 124px;
+		font-weight: 500;
+		@include r(900) {
+			width: 50%;
+			order: -1;
+			text-align: right;
+			justify-content: flex-end;
+		}
+		&--cancel {
+			color: #a1a1a1;
+		}
+		&--complete {
+			color: $green;
+		}
+		&--single {
+			@include r(900) {
+				width: 100%;
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+.orders {
+	font-size: 16px;
+	line-height: 1.4;
+	border-bottom: 1px solid #a1a1a1;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		@include r(900) {
+			flex-wrap: wrap;
+			margin-bottom: 33px;
+		}
+		&--final {
+			padding-left: 8px;
+			padding-right: 8px;
+			font-size: 16px;
+			margin-bottom: 22px;
+		}
+	}
+	&__name {
+		flex-grow: 1;
+		@include r(900) {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	}
+	&__price {
+		text-align: right;
+		width: 16%;
+		flex-shrink: 0;
+		@include r(900) {
+			width: 33%;
+			text-align: left;
+		}
+	}
+	&__counter {
+		width: 16%;
+		text-align: right;
+		flex-shrink: 0;
+		@include r(900) {
+			width: 33%;
+			text-align: center;
+		}
+	}
+	&__total {
+		width: 22%;
+		text-align: right;
+		flex-shrink: 0;
+		@include r(900) {
+			width: 33%;
+			text-align: right;
+		}
+	}
+	// &__result {
+	// 	display: flex;
+	// }
+	&__total-name {
+
+	}
+}

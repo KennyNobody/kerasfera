@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Личный кабинет</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style> /* Здесь будет код, отвечающий за отображение верхнего блока */ </style>
+
+</head>
+
+<body class="body">
+	<div id="page">
+		<header class="header">
+			<div class="decorline"></div>
+			<div class="container header__container">
+				<div class="header__columns">
+					<a href="index.html" class="header__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<a href="#mob-menu" class="header__burger">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-menu"></use>
+						</svg>
+					</a>
+					<div class="header__info">
+						<div class="header__info-columns">
+							<div class="header__info-column">
+								<h1 class="header__discript">
+									«Интернет магазин плитки в Калининграде»
+								</h1>
+								<div class="header__phone">
+									<a href="tel:+74012310500" class="header__link-phone">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+										</svg>
+										(4012) 310-500
+									</a>
+									<p class="header__time">
+										(Пн-Пт 10-19; Сб, Вс 10-18)
+									</p>
+								</div>
+							</div>
+							<div class="header__links-column">
+								<a href="" class="header__link link link--dark">
+									<svg class="icon-svg">
+										<use xlink:href="img/symbol_sprite.svg#icon-svg-user"></use>
+									</svg>
+									<span>Вход/Регистрация</span>
+								</a>
+								<a href="" class="header__link link link--dark">
+									<svg class="icon-svg">
+										<use xlink:href="img/symbol_sprite.svg#icon-svg-cart"></use>
+									</svg>
+									<span>В корзине 0 товаров</span>
+								</a>
+							</div>
+						</div>
+						<form class="header__search search">
+							<input type="text">
+							<button>
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="header__navigation">
+					<li>
+						<a class="root-item-selected" href="about.html">О нас</a>
+					</li>
+					<li>
+						<a href="catalog.html">Каталог</a>
+					</li>
+					<li>
+						<a href="gallery.html">Галерея</a>
+					</li>
+					<li>
+						<a href="return.html">Гарантии и возврат</a>
+					</li>
+					<li>
+						<a href="payment.html">Оплата и доставка</a>
+					</li>
+					<li>
+						<a href="blog.html">Блоги</a>
+					</li>
+					<li>
+						<a href="reviews.html">Отзывы</a>
+					</li>
+					<li>
+						<a href="price.html">Прайс-лист</a>
+					</li>
+					<li>
+						<a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="content">
+			<!-- <section class="breadcrumbs">
+				<div class="container breadcrumbs__container">
+					<div class="breadcrumbs__wrapper">
+						<ul>
+							<li>
+								<a href="index.html">Главная</a>
+							</li>
+							<li>
+								<span>Страница не найдена</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section> -->
+			<section class="acc">
+				<div class="container acc__container">
+					<div class="acc__side">
+						<p class="acc__title-s">
+							Личный кабинет
+						</p>
+						<div class="acc__side-column">
+							<a href="" class="acc__side-link acc__side-link--selected">
+								Главная
+							</a>
+							<a href="" class="acc__side-link">
+								Персональные <br> данные
+							</a>
+							<a href="" class="acc__side-link">
+								Заказы
+							</a>
+							<a href="" class="acc__side-link">
+								Корзина
+							</a>
+						</div>
+						<div class="acc__side-column">
+							<a href="" class="acc__side-btn">
+								Выйти
+							</a>
+						</div>
+					</div>
+					<div class="acc__content">
+						<h3 class="acc__title">
+							Ваши заказы
+						</h3>
+						<a href="" class="acc__order order">
+							<div class="order__number">
+								Заказ № 958
+							</div>
+							<div class="order__info">
+								13.09.2018 10:02:25, <b>23</b> товара на сумму <b>33 240</b> руб.
+							</div>
+							<div class="order__status">
+								обработка
+							</div>
+						</a>
+						<a href="" class="acc__order order">
+							<div class="order__number">
+								Заказ № 958
+							</div>
+							<div class="order__info">
+								13.09.2018 10:02:25, <b>23</b> товара на сумму <b>33 240</b> руб.
+							</div>
+							<div class="order__status order__status--cancel">
+								отменен
+							</div>
+						</a>
+						<a href="" class="acc__order order">
+							<div class="order__number">
+								Заказ № 958
+							</div>
+							<div class="order__info">
+								13.09.2018 10:02:25, <b>23</b> товара на сумму <b>33 240</b> руб.
+							</div>
+							<div class="order__status">
+								в пути
+							</div>
+						</a>
+						<a href="" class="acc__order order">
+							<div class="order__number">
+								Заказ № 958
+							</div>
+							<div class="order__info">
+								13.09.2018 10:02:25, <b>23</b> товара на сумму <b>33 240</b> руб.
+							</div>
+							<div class="order__status order__status--complete">
+								выполнен
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="info">
+				<div class="container">
+					<div class="info__blocks">
+						<a href="payment.html" class="info__block">
+							<h3 class="info__block-title">
+								Оплата
+							</h3>
+							<div class="info__cards">
+								<div class="info__card info__card--1">
+									<img src="img/visa.svg" alt="">
+								</div>
+								<div class="info__card info__card--2">
+									<img src="img/mastercard.svg" alt="">
+								</div>
+								<div class="info__card info__card--3">
+									<img src="img/Sberbank.svg" alt="">
+								</div>
+								<div class="info__card-break"></div>
+								<div class="info__card info__card--4">
+									<img src="img/courier.svg" alt="">
+								</div>
+								<div class="info__card info__card--5">
+									<img src="img/cash.svg" alt="">
+								</div>
+							</div>
+						</a>
+						<a href="payment.html" class="info__block">
+							<h3 class="info__block-title">
+								Доставка
+							</h3>
+							<div class="info__delivs">
+								<div class="info__deliv info__deliv--1">
+									<img src="img/delivery.svg" alt="">
+									<p class="info__deliv-text">
+										Доставка по
+										Калининградской
+										области
+									</p>
+								</div>
+								<div class="info__deliv info__deliv--2">
+									<img src="img/samovyvoz.svg" alt="">
+									<p class="info__deliv-text">
+										Самовывоз
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="info__columns">
+						<div class="info__column">
+							<a href="about.html" class="info__column-title">
+								О НАС
+							</a>
+							<a href="" class="info__link">
+								Договор оферты
+							</a>
+							<a href="" class="info__link">
+								Наши преимущества
+							</a>
+							<a href="" class="info__link">
+								Наши партнеры
+							</a>
+							<a href="" class="info__link">
+								Дизайн проект
+							</a>
+							<a href="" class="info__link">
+								Как купить
+							</a>
+							<a href="" class="info__link">
+								Наши магазины
+							</a>
+							<a href="" class="info__link">
+								Вакансии
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="payment.html" class="info__column-title">
+								ОПЛАТА И ДОСТАВКА
+							</a>
+							<a href="" class="info__link">
+								Скидки
+							</a>
+							<a href="" class="info__link">
+								Оплата
+							</a>
+							<a href="" class="info__link">
+								Доставка
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="return.html" class="info__column-title">
+								ГАРАНТИИ И ВОЗВРАТ
+							</a>
+							<a href="" class="info__link">
+								Гарантии
+							</a>
+							<a href="" class="info__link">
+								Возврат
+							</a>
+							<a href="" class="info__link">
+								Конфиденциальность
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="catalog.html" class="info__column-title info__column-title--lite">
+								Каталог
+							</a>
+							<a href="blog.html" class="info__column-title info__column-title--lite">
+								Блоги
+							</a>
+							<a href="faq.html" class="info__column-title info__column-title--lite">
+								FAQ
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<a href="index.html" class="footer__logo">
+					<svg class="icon-svg">
+						<use xlink:href="img/symbol_sprite.svg#icon-svg-logo"></use>
+					</svg>
+				</a>
+				<div class="socials footer__socials">
+					<a href="https://vk.com/kerasfera" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-vk"></use>
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/kerasfera/" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-fb"></use>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/kerasfera/" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-inst"></use>
+						</svg>
+					</a>
+					<a href="https://www.youtube.com/channel/UC3sew7M_1l7936BfjGBtyyw" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-youtube"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="footer__info">
+					<h3 class="footer__info-title">
+						Адреса наших магазинов в Калиниграде
+					</h3>
+					<div class="footer__info-columns">
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Маточкина, 2а</span>
+							</a>
+							<a href="tel:+74012311650" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 311-650</span>
+							</a>
+						</div>
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Елены Ковальчук, 3-9</span>
+							</a>
+							<a href="tel:+74012935534" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 935-534</span>
+							</a>
+						</div>
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Габайдулина, 39</span>
+							</a>
+							<a href="tel:+74012311456" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 311-456</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="decorline"></div>
+		</footer>
+	</div>
+	<a href="#page" class="top autoscroll">
+		<svg class="icon-svg">
+			<use xlink:href="img/symbol_sprite.svg#icon-svg-top"></use>
+		</svg>
+	</a>
+	<div class="nav" id="mob-menu">
+		<ul>
+			<li><span class="mmenu-link-title">О нас</span>
+				<ul>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+				</ul>
+			</li>
+			<li><span class="mmenu-link-title">Каталог</span>
+				<ul>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Галерея</a></li>
+			<li><a href="#">Гарантии и возврат</a></li>
+			<li><a href="#">Оплата и доставка</a></li>
+			<li><a href="#">Блог</a></li>
+			<li><a href="#">Отзывы</a></li>
+			<li><a href="#">Прайс-лист</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</div>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		// В кавычках указываем путь к файлу спрайта
+		window.storageVar = 'img/symbol_sprite.html';
+	</script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

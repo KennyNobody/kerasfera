@@ -1,0 +1,88 @@
+.present {
+	display: block;
+	background-size: cover;
+	background-position: center;
+	// height: 464px;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		height: 100%;
+		@include r(1160) {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	&__column {
+		width: 50%;
+		height: 100%;
+		display: block;
+		// height: 464px;
+		background-color: rgba(34, 35, 36, 0.8);
+		color: $light;
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		text-align: right;
+		align-items: flex-end;
+		padding-right: 36px;
+		padding-left: 30px;
+		padding-top: 60px;
+		padding-bottom: 74px;
+		@include r(1160) {
+			width: 100%;
+			padding-top: 32px;
+			padding-bottom: 42px;
+			align-items: center;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 70px;
+		line-height: 1;
+		margin-bottom: 32px;
+		@include r(1160) {
+			font-size: 20px;
+		}
+	}
+	&__tag {
+		display: block;
+		background-color: $green;
+		letter-spacing: 0.15em;
+		color: $light;
+		font-size: 16px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-bottom: 6px;
+		@include r(1160) {
+			margin-bottom: 12px;
+			font-size: 14px;
+		}
+	}
+	&__name {
+		font-weight: bold;
+		font-size: 50px;
+		line-height: 1;
+		margin-bottom: 36px;
+		@include r(1160) {
+			font-size: 36px;
+		}
+	}
+	&__btn {
+		color: $light;
+		border: 1px solid $light;
+		padding-right: 30px;
+		padding-left: 30px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		font-weight: 500;
+		&:hover {
+			background-color: $light;
+			color: $dark;
+		}
+	}
+}

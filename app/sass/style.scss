@@ -1,0 +1,43 @@
+@import "core/reset";
+@import "core/mixins";
+@import "core/fonts";
+@import "core/libs";
+@import "core/vars";
+
+// Блоки
+@import "blocks/common";
+@import "blocks/decorline";
+@import "blocks/range";
+@import "blocks/bitrix";
+
+// Главная страница
+@import "sections/acc";
+@import "sections/blog";
+@import "sections/branch";
+@import "sections/breadcrumbs";
+@import "sections/cart";
+@import "sections/catalog";
+@import "sections/collections";
+@import "sections/data";
+@import "sections/discont";
+@import "sections/faq";
+@import "sections/filter";
+@import "sections/footer";
+@import "sections/gallery";
+@import "sections/header";
+@import "sections/info";
+@import "sections/none";
+@import "sections/order";
+@import "sections/personal";
+@import "sections/present";
+@import "sections/price";
+@import "sections/product";
+@import "sections/reviews";
+@import "sections/shop";
+@import "sections/sign";
+@import "sections/slider";
+@import "sections/text";
+
+//Медиазапросы, если не используются миксины
+@import "blocks/media"; 
+

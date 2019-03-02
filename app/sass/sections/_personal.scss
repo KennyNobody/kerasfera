@@ -1,0 +1,70 @@
+.personal {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 688px;
+	justify-content: space-between;
+	align-items: center;
+	@include r(1160) {
+		max-width: 100%;
+	}
+	&__label {
+		width: calc(50% - 8px);
+		margin-bottom: 18px;
+		@include r(560) {
+			width: 100%;
+		}
+	}
+	&__discript {
+		font-size: 16px;
+		color: #636467;
+		margin-bottom: 5px;
+	}
+	&__input {
+		width: 100%;
+		background-color: $light;
+		box-sizing: border-box;
+		height: 44px;
+		border: 1px solid #a1a1a1;
+		padding-left: 12px;
+		padding-right: 12px;
+		font-weight: 500;
+		font-size: 18px;
+		outline: none;
+	}
+	&__btn {
+		width: calc(50% - 8px);
+		height: 44px;
+		border: 0px;
+		background-color: $orange;
+		cursor: pointer;
+		color: $light;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 10px;
+		transition: 0.3s all;
+		@include r(560) {
+			width: 100%;
+		}
+		&:hover {
+			background-color: $green;
+		}
+	}
+	&__delete {
+		width: calc(50% - 8px);
+		font-size: 16px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		@include r(560) {
+			width: 100%;
+		}
+		&-link {
+			color: $dark;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

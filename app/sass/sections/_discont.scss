@@ -1,0 +1,46 @@
+.discont {
+	text-align: center;
+	background-color: $light;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 25px;
+	padding-right: 25px;
+	@include r(1160) {
+		max-width: 100%;
+		width: 500px;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 15px;
+		line-height: 1.4;
+	}
+	&__btn {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 44px;
+		cursor: pointer;
+		padding-left: 24px;
+		padding-right: 25px;
+		color: $light;
+		font-weight: bold;
+		font-size: 20px;
+		margin-bottom: 8px;
+		&--ok {
+			background-color: $green;
+			&:hover {
+				background-color: $green-hover;
+			}
+		}
+		&--cancel {
+			background-color: $orange;
+			&:hover {
+				background-color: $orange-hover;
+			}
+		}
+	}
+}

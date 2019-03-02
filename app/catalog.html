@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Каталог</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style> /* Здесь будет код, отвечающий за отображение верхнего блока */ </style>
+
+</head>
+
+<body class="body">
+	<div id="page">
+		<header class="header">
+			<div class="decorline"></div>
+			<div class="container header__container">
+				<div class="header__columns">
+					<a href="index.html" class="header__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<a href="#mob-menu" class="header__burger">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-menu"></use>
+						</svg>
+					</a>
+					<div class="header__info">
+						<div class="header__info-columns">
+							<div class="header__info-column">
+								<h1 class="header__discript">
+									«Интернет магазин плитки в Калининграде»
+								</h1>
+								<div class="header__phone">
+									<a href="tel:+74012310500" class="header__link-phone">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+										</svg>
+										(4012) 310-500
+									</a>
+									<p class="header__time">
+										(Пн-Пт 10-19; Сб, Вс 10-18)
+									</p>
+								</div>
+							</div>
+							<div class="header__links-column">
+								<a href="" class="header__link link link--dark">
+									<svg class="icon-svg">
+										<use xlink:href="img/symbol_sprite.svg#icon-svg-user"></use>
+									</svg>
+									<span>Вход/Регистрация</span>
+								</a>
+								<a href="" class="header__link link link--dark">
+									<svg class="icon-svg">
+										<use xlink:href="img/symbol_sprite.svg#icon-svg-cart"></use>
+									</svg>
+									<span>В корзине 0 товаров</span>
+								</a>
+							</div>
+						</div>
+						<form class="header__search search">
+							<input type="text">
+							<button>
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="header__navigation">
+					<li>
+						<a class="root-item-selected" href="about.html">О нас</a>
+					</li>
+					<li>
+						<a href="catalog.html">Каталог</a>
+					</li>
+					<li>
+						<a href="gallery.html">Галерея</a>
+					</li>
+					<li>
+						<a href="return.html">Гарантии и возврат</a>
+					</li>
+					<li>
+						<a href="payment.html">Оплата и доставка</a>
+					</li>
+					<li>
+						<a href="blog.html">Блоги</a>
+					</li>
+					<li>
+						<a href="reviews.html">Отзывы</a>
+					</li>
+					<li>
+						<a href="price.html">Прайс-лист</a>
+					</li>
+					<li>
+						<a href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="content">
+			<section class="breadcrumbs">
+				<div class="container breadcrumbs__container">
+					<div class="breadcrumbs__wrapper">
+						<ul>
+							<li>
+								<a href="index.html">Главная</a>
+							</li>
+							<li>
+								<span>Каталог</span>
+							</li>
+							<!-- <li>
+								<span>Товар</span>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="shop">
+				<div class="shop__container container">
+					<div class="filter shop__filter">
+						<div class="filter__overlay">
+
+						</div>
+						<div class="filter__mob-title">
+							<span>Фильтр товаров</span>
+							<svg class="icon-svg">
+								<use xlink:href="img/symbol_sprite.svg#icon-svg-menu"></use>
+							</svg>
+						</div>
+						<div class="filter__wrapper">
+							<p class="filter__title">
+								Фильтры
+							</p>
+							<div class="price">
+								<div class="title filter__name filter__name--price">Цена, руб.</div>
+								<!-- <input type="text" name="PRICE_MIN" value="0" onkeyup="recount();">
+								<input type="text" name="PRICE_MAX" value="50000" onkeyup="recount();"> -->
+								<div class="filter__inputs">
+									<input type="text" name="PRICE_MIN" id="input-with-keypress-0">
+									-
+									<input type="text" name="PRICE_MAX" id="input-with-keypress-1">
+								</div>
+								<div class="filter__range" id="filter__range"></div>
+							</div>
+							<ul>
+								<li class="TIP_NAZNACHENIE filter__block" id="list">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Тип назначения</span>
+									</div>
+									<ul>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для бассейна">
+												<span>Для бассейна</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox" name="TIP_NAZNACHENIE" value="TIP_NAZNACHENIE__Для ванной">
+												<span>Для ванной</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="POVERKHNOST filter__block" id="list">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Поверхность</span>
+									</div>
+									<ul>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="POVERKHNOST" value="POVERKHNOST__Глянцевая">
+												<span>Глянцевая</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="POVERKHNOST" value="POVERKHNOST__Матовая">
+												<span>Матовая</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="STRANA filter__block" id="list">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Страна</span>
+									</div>
+									<ul>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="STRANA" value="STRANA__Германия">
+												<span>Германия</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input onclick="recount();" type="checkbox" name="STRANA" value="STRANA__Египет">
+												<span>Египет</span>
+												<div class="checkmark"></div>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="RAZMER filter__block" id="script">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Размер</span>
+									</div>
+									<ul>
+										<div class="close"></div>
+										<div class="white_border"></div>
+										<div class="filter_block">
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="RAZMER" value="RAZMER__10.7x10.7">
+													<span>10.7x10.7</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="RAZMER" value="RAZMER__10x10">
+													<span>10x10</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="KOLLEKTSIYA filter__block" id="script">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Коллекция</span>
+									</div>
+									<ul>
+										<div class="close"></div>
+										<div class="white_border"></div>
+										<div class="filter_block">
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="KOLLEKTSIYA" value="KOLLEKTSIYA__Elegance Halcon">
+													<span>Elegance Halcon</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="KOLLEKTSIYA" value="KOLLEKTSIYA__Eleganza">
+													<span>Eleganza</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="PROIZVODITEL filter__block" id="script">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Производитель</span>
+									</div>
+									<ul>
+										<div class="close"></div>
+										<div class="white_border"></div>
+										<div class="filter_block"></div>
+										<div class="filter_block">
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="PROIZVODITEL" value="PROIZVODITEL__Geotiles">
+													<span>Geotiles</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="PROIZVODITEL" value="PROIZVODITEL__Glazuker">
+													<span>Glazuker</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="STIL filter__block" id="script">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Стиль</span>
+									</div>
+									<ul>
+										<div class="close"></div>
+										<div class="white_border"></div>
+										<div class="filter_block">
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="STIL" value="STIL__Английский стиль">
+													<span>Английский стиль</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="STIL" value="STIL__Биселадо">
+													<span>Биселадо</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="TSVET filter__block" id="script">
+									<div class="filter__name filter__name--drop">
+										<svg class="icon-svg">
+											<use xlink:href="img/symbol_sprite.svg#icon-svg-drop"></use>
+										</svg>
+										<span>Цвет</span>
+									</div>
+									<ul>
+										<div class="close"></div>
+										<div class="white_border"></div>
+										<div class="filter_block">
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="TSVET" value="TSVET__Бежевый">
+													<span>Бежевый</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+											<li>
+												<label>
+													<input onclick="recount();" type="checkbox" name="TSVET" value="TSVET__Белый">
+													<span>Белый</span>
+													<div class="checkmark"></div>
+												</label>
+											</li>
+										</div>
+									</ul>
+								</li>
+							</ul>
+							<div class="buttons filter__buttons">
+								<div class="reset filter__reset">Сбросить</div>
+							</div>
+						</div>
+					</div>
+					<div class="shop__content">
+						<div class="shop__control">
+							<div class="shop__tags">
+								<span class="shop__tag shop__tag--gray">
+									Все
+								</span>
+								<span class="shop__tag shop__tag--red" name="RASPRODAZHA__1">
+									Распродажа
+								</span>
+								<span class="shop__tag shop__tag--green" name="NOVINKA__1">
+									Новинки
+								</span>
+								<span class="shop__tag shop__tag--orange" name="AKTSIYA__1">
+									Акции
+								</span>
+							</div>
+							<div class="shop__counter">
+								<span class="shop__counter-text">
+									Показывать на странице:
+								</span>
+								<span class="shop__counter-btn shop__counter-btn—active">
+									16
+								</span>
+								<span class="shop__counter-btn">
+									32
+								</span>
+								<span class="shop__counter-btn">
+									64
+								</span>
+							</div>
+							<!-- <div class="count_on_page">
+								<div class="title">показывать на странице</div>
+								<span style="border-left: none;" class="active">16</span>
+								<span>32</span>
+								<span>64</span>
+							</div> -->
+						</div>
+						<div class="shop__items">
+							<a href="single-item.html" class="item">
+								<div class="item__tag item__tag--red">
+									Распродажа
+								</div>
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<a href="single-item.html" class="item">
+								<div class="item__tag item__tag--green">
+									Новинка
+								</div>
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<a href="single-item.html" class="item">
+								<div class="item__tag item__tag--orange">
+									Акция
+								</div>
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<a href="single-item.html" class="item">
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<a href="single-item.html" class="item">
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<a href="single-item.html" class="item">
+								<div class="item__img">
+									<img src="http://placehold.it/1000x600" alt="">
+								</div>
+								<div class="item__title">
+									Название
+								</div>
+							</a>
+							<div class=" item item--clear"></div>
+							<div class=" item item--clear"></div>
+						</div>
+						<div class="shop__nav">
+							<div class="page_nav" style="margin-bottom: 25px;">
+								<span date-name="arrow" rel="1" class="first">1</span>
+								<span date-name="arrow" rel="3" class="left">назад</span>
+								<span rel="4" class="active">4</span>
+								<span date-name="arrow" rel="5" class="right">вперед</span>
+								<span date-name="arrow" rel="18" class="last">18</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="info">
+				<div class="container">
+					<div class="info__blocks">
+						<a href="payment.html" class="info__block">
+							<h3 class="info__block-title">
+								Оплата
+							</h3>
+							<div class="info__cards">
+								<div class="info__card info__card--1">
+									<img src="img/visa.svg" alt="">
+								</div>
+								<div class="info__card info__card--2">
+									<img src="img/mastercard.svg" alt="">
+								</div>
+								<div class="info__card info__card--3">
+									<img src="img/Sberbank.svg" alt="">
+								</div>
+								<div class="info__card-break"></div>
+								<div class="info__card info__card--4">
+									<img src="img/courier.svg" alt="">
+								</div>
+								<div class="info__card info__card--5">
+									<img src="img/cash.svg" alt="">
+								</div>
+							</div>
+						</a>
+						<a href="payment.html" class="info__block">
+							<h3 class="info__block-title">
+								Доставка
+							</h3>
+							<div class="info__delivs">
+								<div class="info__deliv info__deliv--1">
+									<img src="img/delivery.svg" alt="">
+									<p class="info__deliv-text">
+										Доставка по
+										Калининградской
+										области
+									</p>
+								</div>
+								<div class="info__deliv info__deliv--2">
+									<img src="img/samovyvoz.svg" alt="">
+									<p class="info__deliv-text">
+										Самовывоз
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="info__columns">
+						<div class="info__column">
+							<a href="about.html" class="info__column-title">
+								О НАС
+							</a>
+							<a href="" class="info__link">
+								Договор оферты
+							</a>
+							<a href="" class="info__link">
+								Наши преимущества
+							</a>
+							<a href="" class="info__link">
+								Наши партнеры
+							</a>
+							<a href="" class="info__link">
+								Дизайн проект
+							</a>
+							<a href="" class="info__link">
+								Как купить
+							</a>
+							<a href="" class="info__link">
+								Наши магазины
+							</a>
+							<a href="" class="info__link">
+								Вакансии
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="payment.html" class="info__column-title">
+								ОПЛАТА И ДОСТАВКА
+							</a>
+							<a href="" class="info__link">
+								Скидки
+							</a>
+							<a href="" class="info__link">
+								Оплата
+							</a>
+							<a href="" class="info__link">
+								Доставка
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="return.html" class="info__column-title">
+								ГАРАНТИИ И ВОЗВРАТ
+							</a>
+							<a href="" class="info__link">
+								Гарантии
+							</a>
+							<a href="" class="info__link">
+								Возврат
+							</a>
+							<a href="" class="info__link">
+								Конфиденциальность
+							</a>
+						</div>
+						<div class="info__column">
+							<a href="catalog.html" class="info__column-title info__column-title--lite">
+								Каталог
+							</a>
+							<a href="blog.html" class="info__column-title info__column-title--lite">
+								Блоги
+							</a>
+							<a href="faq.html" class="info__column-title info__column-title--lite">
+								FAQ
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<a href="index.html" class="footer__logo">
+					<svg class="icon-svg">
+						<use xlink:href="img/symbol_sprite.svg#icon-svg-logo"></use>
+					</svg>
+				</a>
+				<div class="socials footer__socials">
+					<a href="https://vk.com/kerasfera" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-vk"></use>
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/kerasfera/" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-fb"></use>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/kerasfera/" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-inst"></use>
+						</svg>
+					</a>
+					<a href="https://www.youtube.com/channel/UC3sew7M_1l7936BfjGBtyyw" target="_blank" class="socials__link">
+						<svg class="icon-svg">
+							<use xlink:href="img/symbol_sprite.svg#icon-svg-youtube"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="footer__info">
+					<h3 class="footer__info-title">
+						Адреса наших магазинов в Калиниграде
+					</h3>
+					<div class="footer__info-columns">
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Маточкина, 2а</span>
+							</a>
+							<a href="tel:+74012311650" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 311-650</span>
+							</a>
+						</div>
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Елены Ковальчук, 3-9</span>
+							</a>
+							<a href="tel:+74012935534" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 935-534</span>
+							</a>
+						</div>
+						<div class="footer__info-column">
+							<a href="" class="header__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-point"></use>
+								</svg>
+								<span>ул. Габайдулина, 39</span>
+							</a>
+							<a href="tel:+74012311456" class="footer__link link link--light">
+								<svg class="icon-svg">
+									<use xlink:href="img/symbol_sprite.svg#icon-svg-phone"></use>
+								</svg>
+								<span>(4012) 311-456</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="decorline"></div>
+		</footer>
+	</div>
+	<a href="#page" class="top autoscroll">
+		<svg class="icon-svg">
+			<use xlink:href="img/symbol_sprite.svg#icon-svg-top"></use>
+		</svg>
+	</a>
+	<div class="nav" id="mob-menu">
+		<ul>
+			<li><span class="mmenu-link-title">О нас</span>
+				<ul>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+				</ul>
+			</li>
+			<li><span class="mmenu-link-title">Каталог</span>
+				<ul>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+					<li><a href="#">Пункт меню</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Галерея</a></li>
+			<li><a href="#">Гарантии и возврат</a></li>
+			<li><a href="#">Оплата и доставка</a></li>
+			<li><a href="#">Блог</a></li>
+			<li><a href="#">Отзывы</a></li>
+			<li><a href="#">Прайс-лист</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</div>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		// В кавычках указываем путь к файлу спрайта
+		window.storageVar = 'img/symbol_sprite.html';
+	</script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

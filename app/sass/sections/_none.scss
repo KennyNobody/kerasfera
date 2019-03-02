@@ -1,0 +1,53 @@
+.none {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-bottom: 45px;
+		@include r(1160) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__column {
+		width: calc(50% - 8px);
+		@include r(650) {
+			width: 100%;
+		}
+		&--ill {
+			@include r(1160) {
+				margin-bottom: 50px;
+			}
+			img {
+				max-width: 100%;
+				display: block;
+			}
+		}
+		&--text {
+
+		}
+	}
+	&__title {
+		font-weight: bold;
+		color: $green;
+		font-size: 30px;
+		line-height: 1.6;
+	}
+	&__text {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+	&__btn {
+		background-color: $orange;
+		display: inline-block;
+		color: $light;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 36px;
+		padding-left: 40px;
+		padding-right: 40px;
+		&:hover {
+			background-color: $green;
+		}
+	}
+}

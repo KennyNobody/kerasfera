@@ -1,0 +1,44 @@
+.breadcrumbs {
+	margin-bottom: 21px;
+	&__wrapper {
+		background-color: #eaeaea;
+	}
+	ul {
+		display: flex;
+	}
+	li {
+		display: inline-flex;
+		background-color: $orange;
+		margin-right: 2px;
+		color: $light;
+		line-height: 36px;
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: uppercase;
+		&.breadcrumbs__static {
+			background-color: $green;
+		}
+	}
+	a {
+		background-color: $green;
+		color: $light;
+		padding-left: 9px;
+		padding-right: 9px;
+		&:hover {
+			background-color: $green-hover;
+		}
+	}
+	span {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+	&__static {
+		
+	}
+	&__now {
+
+	}
+	@include r(736) {
+		display: none;
+	}
+}
