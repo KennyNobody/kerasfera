@@ -11,37 +11,37 @@ $(document).ready(function(){
 		closeOnContentClick: 'true'
 	});
 
-    $('.branch__slider-wrapper--1').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-                    tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+	$('.branch__slider-wrapper--1').magnificPopup({
+		type: 'image',
+		delegate: 'a',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
         closeOnContentClick: 'true'
     });
 
-    $('.branch__slider-wrapper--2').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-                    tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+	$('.branch__slider-wrapper--2').magnificPopup({
+		type: 'image',
+		delegate: 'a',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
         closeOnContentClick: 'true'
     });
 
-    $('.branch__slider-wrapper--3').magnificPopup({
-        type: 'image',
-        delegate: 'a',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-                    tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+	$('.branch__slider-wrapper--3').magnificPopup({
+		type: 'image',
+		delegate: 'a',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
         closeOnContentClick: 'true'
@@ -90,8 +90,15 @@ $(document).ready(function(){
         }
     };
 
-    $(window).on('resize load', function(){
-    	reWidth();
+    reWidth();
+
+    $(window).on('resize', function(){
+    	setTimeout(reWidth, 300);
+    });
+
+    $(".filter__block").click(function() {
+    	// reWidth();
+    	setTimeout(reWidth, 300);
     });
 
     $(window).scroll(function() {
@@ -318,13 +325,13 @@ $(document).ready(function(){
     // });
 
     $(".data").on( "click", ".data__checkbox", function(e) {
-        if (e.target.tagName == 'INPUT') return;
-        var $target = $(e.target);
-        if (!$target.hasClass('data__checkbox')) $target = $target.parents('.data__checkbox');
-        $target.parent().find('input[type="radio"]').each(function(){
-            $(this).prop('checked', false); 
-        });
-        $target.find('input[type="radio"]').prop('checked', true).trigger('click');
+    	if (e.target.tagName == 'INPUT') return;
+    	var $target = $(e.target);
+    	if (!$target.hasClass('data__checkbox')) $target = $target.parents('.data__checkbox');
+    	$target.parent().find('input[type="radio"]').each(function(){
+    		$(this).prop('checked', false); 
+    	});
+    	$target.find('input[type="radio"]').prop('checked', true).trigger('click');
     });
 
     // $(".data").on( "click", ".data__checkbox-2", function(e) {
@@ -354,11 +361,11 @@ $(document).ready(function(){
     });
 
     $('.faq__form .faq__accept input').on('change', function(){
-        if($(this).prop("checked") == true){
-            $('.faq__form .faq__btn').removeClass('faq__btn--disabled');
-        }else{
-            $('.faq__form .faq__btn').addClass('faq__btn--disabled');
-        }
+    	if($(this).prop("checked") == true){
+    		$('.faq__form .faq__btn').removeClass('faq__btn--disabled');
+    	}else{
+    		$('.faq__form .faq__btn').addClass('faq__btn--disabled');
+    	}
     });
 
     $('.call__question input').on('change', function(){
@@ -409,10 +416,6 @@ $(document).ready(function(){
 		pageSelector: "#page"
 	}
 });
-
-    //=========== Новый фильтр  ===========
-
-
 
 });
 
