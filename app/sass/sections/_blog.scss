@@ -217,8 +217,20 @@
 		br {
 			clear: both;
 		}
-		img {
+		.img-50 {
 			width: calc(50% - 8px);
+			float: left;
+			margin-right: 8px;
+			margin-bottom: 8px;
+			@include r(650) {
+				width: 100%;
+				display: block;
+			}
+		}
+		.img-100 {
+			width: auto;
+			height: auto;
+			max-width: 100%;
 			float: left;
 			margin-right: 8px;
 			margin-bottom: 8px;

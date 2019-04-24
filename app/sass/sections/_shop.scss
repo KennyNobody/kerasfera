@@ -127,6 +127,22 @@
 			justify-content: center;
 		}
 	}
+	.m-load {
+		position: relative;
+		&::after {
+			position: absolute;
+			top: -10px;
+			bottom: 0px;
+			left: 0px;
+			right: -10px;
+			z-index: 3;
+			content: "";
+			background-image: url(https://kerasfera.ru/bitrix/templates/new/img/loader.gif);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: rgba(253, 253, 253, 0.75);
+		}
+	}
 }
 
 .item {

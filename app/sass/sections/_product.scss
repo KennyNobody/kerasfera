@@ -149,58 +149,58 @@
 		}
 		&__badge {
 			border-radius: 50px;
-			background-color: #a1a1a1;
+			background-color: #a1a1a1 !important;
 			transition: 0.3s all;
 		}
 		&__icon {
-			height: 30px;
-			width: 30px;
-			background-size: 80%;
-			background-position: center;
-			background-repeat: no-repeat;
+			height: 30px !important;
+			width: 30px !important;
+			background-size: 80% !important;
+			background-position: center !important;
+			background-repeat: no-repeat !important;
 		}
 		&__item_service_vkontakte {
 			&:hover {
 				.ya-share2__badge {
-					background-color: #48729e;
+					background-color: #48729e !important;
 				}
 			}
 		}
 		&__item_service_facebook {
 			&:hover {
 				.ya-share2__badge {
-					background-color: #3b5998;
+					background-color: #3b5998 !important;
 				}
 			}
 		}
 		&__item_service_viber {
 			.ya-share2__icon {
-				background-size: 73%;
+				background-size: 73% !important;
 			}
 			&:hover {
 				.ya-share2__badge {
-					background-color: #7b519d;
+					background-color: #7b519d !important;
 				}
 			}
 		}
 		&__item_service_whatsapp {
 			&:hover {
 				.ya-share2__badge {
-					background-color: #65bc54;
+					background-color: #65bc54 !important;
 				}
 			}
 			.ya-share2__icon {
-				background-size: 75%;
+				background-size: 75% !important;
 			}
 		}
 		&__item_service_telegram {
 			&:hover {
 				.ya-share2__badge {
-					background-color: #64a9dc;
+					background-color: #64a9dc !important;
 				}
 			}
 			.ya-share2__icon {
-				background-size: 73%;
+				background-size: 73% !important;
 			}
 		}
 	}
