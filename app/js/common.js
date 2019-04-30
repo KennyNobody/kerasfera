@@ -300,30 +300,6 @@ $(document).ready(function(){
     	$(this).parent().children('input').val(number);
     });
 
-
-    //========== Чекбоксы в заполнении заказа ==========
-
-    // $(".data__checkbox-1").click(function(){
-    // 	$(this).find(".data__input-1").prop('checked', true);
-    // 	$(this).addClass("data__checkbox-1--checked");
-    // 	$(".data__checkbox-1").not(this).removeClass("data__checkbox-1--checked");
-    // 	$(".data__checkbox-1").not(this).find(".data__input-1").prop('checked', false);
-    // });
-
-    // $(".data__checkbox-2").click(function(){
-    // 	$(this).find(".data__input-2").prop('checked', true);
-    // 	$(this).addClass("data__checkbox-2--checked");
-    // 	$(".data__checkbox-2").not(this).removeClass("data__checkbox-2--checked");
-    // 	$(".data__checkbox-2").not(this).find(".data__input-2").prop('checked', false);
-    // });
-
-    // $(".data__checkbox-3").click(function(){
-    // 	$(this).find(".data__input-3").prop('checked', true);
-    // 	$(this).addClass("data__checkbox-3--checked");
-    // 	$(".data__checkbox-3").not(this).removeClass("data__checkbox-3--checked");
-    // 	$(".data__checkbox-3").not(this).find(".data__input-3").prop('checked', false);
-    // });
-
     $(".data").on( "click", ".data__checkbox", function(e) {
     	if (e.target.tagName == 'INPUT') return;
     	var $target = $(e.target);
@@ -333,22 +309,6 @@ $(document).ready(function(){
     	});
     	$target.find('input[type="radio"]').prop('checked', true).trigger('click');
     });
-
-    // $(".data").on( "click", ".data__checkbox-2", function(e) {
-    //     if($(e.target).find('input[type="radio"]').length) {
-    //       $(e.target).find('input[type="radio"]').trigger('click');
-    //     } else {
-    //       $(e.target).find('input[type="checkbox"]').trigger('click');
-    //     }
-    // });
-
-    // $(".data").on( "click", ".data__checkbox-3", function(e) {
-    //     if($(e.target).find('input[type="radio"]').length) {
-    //       $(e.target).find('input[type="radio"]').trigger('click');
-    //     } else {
-    //       $(e.target).find('input[type="checkbox"]').trigger('click');
-    //     }
-    // });
 
     //========== Проверка чекбокса ==========
 
@@ -404,18 +364,38 @@ $(document).ready(function(){
     $("#mob-menu").mmenu({
     	'navbar': {
     		"title": "<span class='logo navline__logo'>КЕРАСФЕРА</span>",
-        // "titleLink": 'none'
-    },
-    extensions: {
-    	"all": ["theme-white", "pagedim-black", "border-none", "fx-menu-slide"],
-    	"(min-height: 600px)": ["listview-large"],
-    	"(min-height: 900px)": ["listview-huge"]
-    }
-}, {
-	offCanvas: {
-		pageSelector: "#page"
-	}
+            // "titleLink": 'none'
+        },
+        extensions: {
+         "all": ["theme-white", "pagedim-black", "border-none", "fx-menu-slide"],
+         "(min-height: 600px)": ["listview-large"],
+         "(min-height: 900px)": ["listview-huge"]
+     }
+ }, {
+     offCanvas: {
+      pageSelector: "#page"
+  }
 });
+
+    // Блок оповещения
+    // if ($.cookie('info-block')) $('.accent').hide();
+    // else {
+    //     $(".accent__close").click(function() {
+    //         $(".accent").fadeOut(1000);
+    //         $.cookie('info-block', true);    
+    //     });
+    // }
+
+    $(".accent__close").click(function () {
+        $.cookie("popup", "1", {expires: 1} );
+        $(".accent").hide();
+    });
+
+    if ( $.cookie("popup") == null ){
+        $(".accent").show();
+    }
+    else { $(".accent").hide();
+}
 
 });
 

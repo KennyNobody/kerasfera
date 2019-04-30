@@ -51,7 +51,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/scroll/custom-scroll.js',
 		'app/libs/range/distribute/nouislider.min.js',
 		'app/libs/swiper/dist/js/swiper.min.js',
-		// 'app/libs/table/js/footable.js',
+		'app/libs/cookie/jquery.cookie.js',
 		'app/libs/wnumb/wNumb.js',
 		'app/libs/masonry/masonry.js',
 		'app/libs/slick/slick/slick.js',

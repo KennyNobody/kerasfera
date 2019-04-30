@@ -1,0 +1,30 @@
+.accent {
+	background-color: #ff4747;
+	color: $light;
+	font-size: 14px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	display: none;
+	&__container {
+		position: relative;
+	}
+	p {
+		text-align: center;
+		@include r(1160) {
+			text-align: left;
+			padding-right: 30px;
+		}
+	}
+	&__close {
+		height: 16px;
+		width: 16px;
+		fill: $light;
+		cursor: pointer;
+		position: absolute;
+		right: 5px;
+		top: calc(50% - 8px);
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
