@@ -248,7 +248,26 @@
 		}
 	}
 	&__control {
-
+		display: flex;
+		justify-content: space-between;
+		@include r(1160) {
+			display: block;
+		}
+	}
+	&__control-column {
+		width: 50%;
+		display: block;
+		max-width: 512px;
+		@include r(1160) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&--left {
+			@include r(1160) {
+				margin-bottom: 40px;
+			}
+		}
 	}
 	&__btn {
 		&-sale {
@@ -264,7 +283,7 @@
 			margin-right: 16px;
 			font-weight: bold;
 			font-size: 20px;
-			width: 248px;
+			width: 246px;
 			margin-bottom: 12px;
 			&:hover {
 				background-color: $green-hover;
@@ -283,9 +302,78 @@
 			margin-right: 16px;
 			font-weight: bold;
 			font-size: 20px;
-			width: 248px;
+			width: 208px;
 			&:hover {
 				background-color: $orange-hover;
+			}
+		}
+	}
+	&__discript {
+		border: 1px solid #a1a1a1;
+		font-size: 16px;
+		line-height: 1.3;
+		color: #636467;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding-top: 22px;
+		padding-bottom: 30px;
+		list-style-type: disc;
+		list-style-position: inside;
+		li {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.agree {
+	margin-bottom: 14px;
+	display: flex;
+	&__icon {
+		box-sizing: border-box;
+		height: 16px;
+		width: 16px;
+		border: 1px solid #a1a1a1;
+		flex-shrink: 0;
+		margin-right: 10px;
+		position: relative;
+		transition: 0.3s all;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 4px;
+			top: 0;
+			width: 4px;
+			height: 9px;
+			opacity: 0;
+			border: solid #006a44;
+			border-width: 0 2px 2px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+			transition: 0.3s all;
+		}
+	}
+	&__input {
+		display: none;
+		&:checked + .agree__icon {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	&__text {
+		line-height: 1.3;
+		font-size: 16px;
+		a {
+			color: $green;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		@include r(1160) {
+			br {
+				display: none;
 			}
 		}
 	}

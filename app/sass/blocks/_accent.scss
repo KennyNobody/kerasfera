@@ -1,10 +1,48 @@
 .accent {
-	background-color: #ff4747;
-	color: $light;
+	
 	font-size: 14px;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	display: none;
+	&--top {
+		background-color: #ff4747;
+		color: $light;
+	}
+	&--bottom {
+		bottom: 0px;
+		position: fixed;
+		z-index: 4;
+		right: 40px;
+		bottom: 100px;
+		max-width: 100%;
+		width: 490px;
+		background-color: $light;
+		box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
+		display: flex;
+		align-items: center;
+		height: 160px;
+		@include r(1160) {
+			width: 420px;
+			p {
+				text-align: center;
+			}
+		}
+		@include r(520) {
+			width: 100%;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			padding-bottom: 70px;
+			height: 180px;
+		}
+		a {
+			text-decoration: underline;
+			color: $dark;
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
 	&__container {
 		position: relative;
 	}
@@ -18,13 +56,21 @@
 	&__close {
 		height: 16px;
 		width: 16px;
-		fill: $light;
+		
 		cursor: pointer;
 		position: absolute;
 		right: 5px;
 		top: calc(50% - 8px);
 		&:hover {
 			opacity: 0.7;
+		}
+		&--top {
+			fill: $light;
+		}
+		&--bottom {
+			fill: $dark;
+			top: 20px;
+			right: 20px;
 		}
 	}
 }

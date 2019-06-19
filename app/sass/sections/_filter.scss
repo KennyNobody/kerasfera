@@ -153,6 +153,13 @@
 					transform: rotate(0deg);
 				}
 			}
+			&.filter__block--RAZMER {
+				ul {
+					max-height: 10000px;
+					height: auto;
+					overflow: auto;
+				}
+			}
 		}
 	}
 	&__price {

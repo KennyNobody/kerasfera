@@ -217,7 +217,7 @@ a {
 .autoscroll {
 	width: 40px;
 	height: 40px;
-	border: 1px solid #a1a1a1;
+	border: 1px solid $orange;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -233,14 +233,14 @@ a {
 		opacity: 1;
 	}
 	svg {
-		fill: #a1a1a1;
+		fill: $orange;
 		width: 24px;
 		height: 24px;
 		transform: rotate(-90deg);
 	}
 	&:hover {
-		background-color: #a1a1a1;
-		border-color: #a1a1a1;
+		background-color: $orange;
+		border-color: $orange;
 		svg {
 			fill: $light;
 		}

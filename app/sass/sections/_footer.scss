@@ -55,4 +55,19 @@
 	@include r(736) {
 		
 	}
+	&__discript {
+		font-size: 14px;
+		text-align: center;
+		.container {
+			border-top: 1px solid #d9d9d9;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		a {
+			color: #FF0000;
+			&:hover {
+				color: $light;
+			}
+		}
+	}
 }

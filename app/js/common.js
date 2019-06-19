@@ -367,35 +367,107 @@ $(document).ready(function(){
             // "titleLink": 'none'
         },
         extensions: {
-         "all": ["theme-white", "pagedim-black", "border-none", "fx-menu-slide"],
-         "(min-height: 600px)": ["listview-large"],
-         "(min-height: 900px)": ["listview-huge"]
-     }
- }, {
-     offCanvas: {
-      pageSelector: "#page"
-  }
-});
-
-    // Блок оповещения
-    // if ($.cookie('info-block')) $('.accent').hide();
-    // else {
-    //     $(".accent__close").click(function() {
-    //         $(".accent").fadeOut(1000);
-    //         $.cookie('info-block', true);    
-    //     });
-    // }
-
-    $(".accent__close").click(function () {
-        $.cookie("popup", "1", {expires: 1} );
-        $(".accent").hide();
+        	"all": ["theme-white", "pagedim-black", "border-none", "fx-menu-slide"],
+        	"(min-height: 600px)": ["listview-large"],
+        	"(min-height: 900px)": ["listview-huge"]
+        }
+    }, {
+    	offCanvas: {
+    		pageSelector: "#page"
+    	}
     });
 
-    if ( $.cookie("popup") == null ){
-        $(".accent").show();
+    // Блок оповещения
+
+    $(".accent__close--top").click(function () {
+    	$.cookie("popup-top", "1", {expires: 1} );
+    	$(this).parent().parent().hide();
+    });
+
+    $(".accent__close--bottom").click(function () {
+        $.cookie("popup-bottom", "1", {expires: 1} );
+        $(this).parent().parent().hide();
+    });
+
+    if ( $.cookie("popup-top") == null ){
+    	$(".accent--top").show();
     }
-    else { $(".accent").hide();
-}
+    else { 
+        $(".accent--top").hide();
+    }
+
+    if ( $.cookie("popup-bottom") == null ){
+        $(".accent--bottom").show();
+    }
+    else { 
+        $(".accent--bottom").hide();
+    }
+
+	// Что-то от Николая
+
+	$(function(){
+		$('body').on('submit', '.call__content', function(e){
+			e.preventDefault();
+			var $target = $(e.target);
+
+			if (!$target.find('.call__about').length) {
+				var name = $target.find('input[name="Prop[1]"]').val();
+				var phone = $target.find('input[name="Prop[2]"]').val();
+
+				if (name == '' && phone == '') {
+					alert('Пожалуйста заполните имя и телефон');
+					return;
+				} else if (name == '') {
+					alert('Пожалуйста заполните имя');
+					return;
+				} else if (phone == '') {
+					alert('Пожалуйста заполните телефон');
+					return;
+				}
+			}
+
+			if (!$target.hasClass('sending')) {
+				$target.addClass('sending');
+				$.post(!$target.find('.call__about').length ? '/ajax/under_order.php' : '/aktsii/add2basket.php', $target.serialize());
+				if (!$target.find('.call__about').length) {
+					$target.html('<p>Мы проинформируем вас о поступлении. Спасибо за обращение</p>');
+				} else {
+					var text = $('a.header__link.link.link--dark span').text();
+					text = Number(text.replace(/[^0-9]/gi, ''));
+					text++;
+					$('a.header__link.link.link--dark span').text(
+						'В корзине '+text+' '+declOfNum(text, ['товар', 'товара', 'товаров'])
+						);
+					$target.find('.call__control-btn').val('Перейти в корзину');
+				}
+			} else {
+				if ($target.find('.call__about').length) {
+					window.location = '/personal/cart/';
+				}
+			}
+		});
+
+		$('.style__buy.fast-buy').on('click', function(e){
+			e.preventDefault();
+			var $this = $(this);
+			if ($this.hasClass('style__buy--added')) {
+				window.location = '/personal/cart/';
+			} else {
+				$this.css('position', 'relative');
+				$this.addClass('style__buy--added');
+				setTimeout(function(){
+					$this.removeClass('style__buy--added');
+					$this.text('Купить');
+				}, 5000);
+				var $form = $($this.attr('href')).find('form');
+				$form.find('.call__counter input').val(
+					$(this).parents('.style__info-column').find('>.call__counter input').val()
+					);
+				$form.trigger('submit');
+				$this.text('В корзину');
+			}
+		});
+	});
 
 });
 
